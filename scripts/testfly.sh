@@ -1,4 +1,4 @@
 #!/bin/bash
-echo "hello start";
+echo "hello start>>>>>>>>>>>>>";
 fly -t manulife-ci pipelines
-echo "end";
+echo "hello end<<<<<<<<<<<<<<<";
