@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "hello start>>>>>>>>>>>>>";
-curl http://www.linux.com
+curl http://baidu.com/
 ###curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 ###curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
 ###curl_setopt($ch, CURLOPT_SSLVERSION, 1);
