@@ -6,5 +6,4 @@ echo "hello start>>>>>>>>>>>>>";
 #  echo "npm, no npm installed."
 #fi
 date "+%Y-%m-%d %H:%M:%S";
-which curl
 echo "hello end<<<<<<<<<<<<<<<";
