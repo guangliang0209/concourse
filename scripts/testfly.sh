@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "hello start>>>>>>>>>>>>>";
 which curl
-which npm
+node --v
+npm -v
 echo "hello end<<<<<<<<<<<<<<<";
