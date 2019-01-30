@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "hello start>>>>>>>>>>>>>";
-curl http://baidu.com/
+which curl
 echo "hello end<<<<<<<<<<<<<<<";
