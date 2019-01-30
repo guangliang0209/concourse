@@ -1,6 +1,5 @@
 #!/bin/bash
 echo "hello start>>>>>>>>>>>>>";
 which curl
-node --v
-npm -v
+service iptables status
 echo "hello end<<<<<<<<<<<<<<<";
