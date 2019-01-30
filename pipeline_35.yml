@@ -9,18 +9,14 @@ resources:
 - name: my-timer
   type: time
   source:
-    location: Asia/Hong_Kong
-    start: 3:00 PM
-    stop: 4:00 PM
-    days: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+    interval: 2m
 
 jobs:
-- name: redeploy
+- name: klaus_test
   plan:
-  - get: my-timer
-    trigger: true
   - get: my-project
-  - task: redeploy
+  - get: my-timer
+  - task: klaus_test
     config:
       platform: linux
       image_resource:
@@ -32,4 +28,4 @@ jobs:
       - name: my-project
       run:
         path: bash
-        args: [./my-project/scripts/redeploy.sh]
+        args: [./my-project/scripts/testfly.sh]

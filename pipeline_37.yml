@@ -15,12 +15,12 @@ resources:
     days: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
 
 jobs:
-- name: redeploy
+- name: klaus_test
   plan:
   - get: my-timer
     trigger: true
   - get: my-project
-  - task: redeploy
+  - task: klaus_test
     config:
       platform: linux
       image_resource:
@@ -32,4 +32,4 @@ jobs:
       - name: my-project
       run:
         path: bash
-        args: [./my-project/scripts/redeploy.sh]
+        args: [./my-project/scripts/testfly.sh]

@@ -9,18 +9,21 @@ resources:
 - name: my-timer
   type: time
   source:
-    location: Asia/Hong_Kong
-    start: 3:00 PM
-    stop: 4:00 PM
-    days: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+    interval: 2m
 
 jobs:
-- name: redeploy
+- name: test1
+  plan:
+  - get: my-project
+  - put: my-timer
+
+- name: test2
   plan:
   - get: my-timer
+    passed: [test1]
     trigger: true
-  - get: my-project
-  - task: redeploy
+
+  - task: mytask
     config:
       platform: linux
       image_resource:
@@ -29,7 +32,7 @@ jobs:
           repository: docker.artifactory.platform.manulife.io/gsd-java-basic
           tag: latest
       inputs:
-      - name: my-project
+      - name: my-timer
       run:
         path: bash
-        args: [./my-project/scripts/redeploy.sh]
+        args: [./my-timer/scripts/testfly.sh]
