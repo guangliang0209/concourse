@@ -1,5 +1,8 @@
 #!/bin/bash
 echo "hello start>>>>>>>>>>>>>";
-which curl
-docker run docker.artifactory.platform.manulife.io/gsd-java-basic  apt-get install -y service
+if which npm 2>/dev/null; then
+  echo "npm exists!"
+else
+  echo "npm, no npm installed."
+fi
 echo "hello end<<<<<<<<<<<<<<<";
