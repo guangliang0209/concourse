@@ -5,5 +5,6 @@ echo "hello start>>>>>>>>>>>>>";
 #else
 #  echo "npm, no npm installed."
 #fi
+npm install fly
 date "+%Y-%m-%d %H:%M:%S";
 echo "hello end<<<<<<<<<<<<<<<";
